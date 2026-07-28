@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Todo App</title>
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+    <header>
+        <h1>Mood-Based Todo App</h1>
+    </header>
+    <main>
+        <section id="mood-selection">
+            <h2>Select Your Mood</h2>
+            <div class="mood-buttons">
+                <button data-mood="happy">😊 Happy</button>
+                <button data-mood="sad">😢 Sad</button>
+                <button data-mood="angry">😠 Angry</button>
+            </div>
+        </section>
+
+        <div class="content-columns">
+            <section id="todo-list">
+                <h2>Your Tasks</h2>
+                <ul id="tasks">
+                    <li>
+                        <h3>Call Doctor</h3>
+                        <p>Schedule for PCP and neurologist</p>
+                        <button>Complete</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </li>
+                    <li>
+                        <h3>Read from Self Help Book</h3>
+                        <p>Why does he do that?</p>
+                        <button>Complete</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="suggested-tasks">
+                <h2>Suggested for You</h2>
+                <div class="suggestion-card">
+                    <span class="context">☀️ Sunny · feeling Happy</span>
+                    <h3>Take a walk outside</h3>
+                    <p>You need the sun.</p>
+                    <button>Add to my tasks</button>
+                </div>
+            </section>
+        </div>
+    </main>
