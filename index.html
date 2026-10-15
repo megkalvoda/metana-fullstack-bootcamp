@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Todo App</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/loginForm.css">
+    <link rel="stylesheet" href="Styles/moodSelecter.css">
+    <link rel="stylesheet" href="Styles/suggestedTaskComponent.css">
+    <link rel="stylesheet" href="Styles/taskCreationForm.css">
+    <link rel="stylesheet" href="Styles/tasksComponent.css">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======---->
+
+    <header>
+        <p> Hi, <span id="username">Guest</span></p>
+        <h1>Mood-Based Todo App</h1>
+        <div class="header-actions">
+            <button id="profile-btn">Profile</button>
+            <button id="mood-btn">Mood</button>
+            <button id="add-task-btn">Add Task</button>
+        </div>
+    </header>
+
+    <!-- ======= Main Page Content ======---->
+
+    <main>
+        <!-- ======= Mood selection ======---->
+
+
+        <div class="content-columns">
+
+            <!-- ======= Task List (filled in by taskscomponent.js) ======---->
+
+            <section id="todo-list">
+                <h2>Your Tasks</h2>
+                <ul id="tasks">
+                </ul>
+            </section>
+
+
+            <!-- ======= Suggested Tasks (filled in by suggestedTaskComponent.js) ======---->
+            <section id="suggested-tasks">
+                <h2>Suggested for You</h2>
+                <div class="suggestion-card">
+                    <span class="context">☀️ Sunny · feeling Happy</span>
+                    <h3>Take a walk outside</h3>
+                    <p>You need the sun.</p>
+                    <button>Add to my tasks</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ======= Dialogs(hidden) ======---->
+    <!-- ======= loginForm.js ======---->
+    <dialog id="login-dialog">
+        <div class="login-container">
+            <h2>Welcome!</h2>
+            <p class="subtitle">Please log in to continue</p>
+
+            <form class="login-form">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <p id="login-error" class="error-message"></p>
+
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- ======= edit profile dialog: loginform.js ======---->
+
+    <dialog id="profile-dialog">
+        <div class="login-container">
+            <h2>Edit Profile</h2>
+
+            <form id="profile-form" class="login-form">
+                <label for="profile-username">Username</label>
+                <input type="text" id="profile-username" name="username" required>
+
+                <label for="profile-password">Password</label>
+                <input type="password" id="profile-password" name="password" required>
+
+                <p id="profile-error" class="error-message"></p>
+
+                <button type="submit">Save Changes</button>
+                <button type="button" id="logout-btn">Logout</button>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- ======= mood dialog: moodselecter.js ======---->
+
+    <dialog id="mood-dialog">
+        <div class="mood-container">
+            <h2>Select Your Mood</h2>
+            <div class="mood-buttons">
+                <button data-mood="happy">😊 Happy</button>
+                <button data-mood="sad">😢 Sad</button>
+                <button data-mood="angry">😠 Angry</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ======= create task dialog: taskCreationForm.js ======---->
+
+    <dialog id="task-dialog">
+
+        <div class="task-container">
+
+            <h2>Create a New Task</h2>
+            <form id="task-form" class="task-form">
+                <label for="task-title">Task Title</label>
+                <input type="text" id="task-title" name="task-title" required>
+
+                <label for="task-description">Description</label>
+                <textarea id="task-description" name="task-description" required></textarea>
+
+                <label for="due-date">Due Date</label>
+                <input type="date" id="due-date" name="due-date" required>
+
+                <label for="task-duration">Duration (in minutes)</label>
+                <input type="number" id="task-duration" name="task-duration" min="1" required>
+
+                <p id="task-error" class="error-message"></p>
+                <button type="submit">Create Task</button>
+
+            </form>
+        </div>
+    </dialog>
+
+    <!-- ======= edit task dialog: taskscomponent.js ======---->
+    <dialog id="edit-task-dialog">
+        <div class="task-container">
+            <h2>Edit Task</h2>
+
+            <form id="edit-task-form" class="task-form">
+                <label for="edit-title">Task Title</label>
+                <input type="text" id="edit-title" name="edit-title" required>
+
+                <label for="edit-description">Description</label>
+                <textarea id="edit-description" name="edit-description" required></textarea>
+
+                <label for="edit-duration">Duration in min </label>
+                <input type="number" id="edit-duration" name="edit-duration" min="1" required>
+
+                <label for="edit-due-date">Due Date</label>
+                <input type="date" id="edit-due-date" name="edit-due-date" required>
+
+                <p id="edit-error" class="error-message"></p>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- ======= success message: index.js ======---->
+
+    <div id="toast"></div>
+
+    <!-- ======= scripts (index.js ) ======---->
+
+    <script src="Scripts/loginForm.js"></script>
+    <script src="Scripts/moodSelecter.js"></script>
+    <script src="Scripts/suggestedTaskComponent.js"></script>
+    <script src="Scripts/taskCreationForm.js"></script>
+    <script src="Scripts/tasksComponent.js"></script>
+    <script src="Scripts/index.js"></script>
+</body>
+
+</html>
