@@ -1,0 +1,37 @@
+
+.suggested-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.suggested-card .context{
+    display: inline-block;
+    background-color: #f5e6d3;
+    color: #8a6d3b;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.suggested-card h3 {
+    margin-bottom: 6px;
+}
+
+.suggested-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.suggested-card button {
+    background-color: #d6a9be;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}

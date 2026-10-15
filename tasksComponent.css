@@ -1,0 +1,34 @@
+
+.task-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+.task-card h3{
+    margin-bottom: 6px;
+}
+.task-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+.task-card button {
+    border: none;
+    border-radius:5px;
+    padding: 8px 14px;
+    margin-right: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+}
+.task-card .complete {
+    background-color: #9db89f;
+}
+.task-card .edit {
+    background-color: #b0b0b0;
+}
+.task-card .delete {
+    background-color: #e39b94;
+}

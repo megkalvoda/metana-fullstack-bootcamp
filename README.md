@@ -1,16 +1,25 @@
-# metana-fullstack-bootcamp
+# Mood-Based Todo App
 
-Module 2 : Mood based Toddo App
+## This app is used to track current mood and tasks.
 
-A mood-based To
-do app that suggests certain tasks based on how one is feeling and the weather. built with static HTML and CSS. 
+## Live Demo
 
-you can see screenshots here : mood-based-todo-app/Assets
+## What's New in Module 3
 
+- New Login features.
+- Ability to edit profile and logout.
+- Create New Tasks.
+- Allows to select completing, editing, and deleting tasks.
+- Data is saved on localStorage.
+- pop-up success messages.
+- more of a responsive design. 
 
-<img width="2028" height="1648" alt="index" src="https://github.com/user-attachments/assets/88f9c2cd-faa8-42cd-beef-c73ecb8e6ee2" />
+## How to Use
+- Click username at the top to login
+- To add a Task click 'add task' button at the top and fill in.
+- To edit, click on edit button in task. click the check mark in task to mark as complete, and delete button to delete. 
 
-<img width="2036" height="1662" alt="loginForm" src="https://github.com/user-attachments/assets/9c2d7561-9ec3-4595-9a8c-685e55c48c7f" />
-
-
-
+## Built with 
+- HTML
+- CSS
+- JavaScript (localStorage)
